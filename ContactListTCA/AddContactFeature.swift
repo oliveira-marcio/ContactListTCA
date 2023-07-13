@@ -15,14 +15,22 @@ struct AddContactFeature: ReducerProtocol {
     enum Action: Equatable {
         case cancelButtonTapped
         case saveButtonTapped
+        case delegate(Delegate)
         case setName(String)
+        enum Delegate: Equatable {
+            case cancel
+            case saveContact(Contact)
+        }
     }
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {
         case .cancelButtonTapped:
-            return .none
+            return .send(.delegate(.cancel))
 
         case .saveButtonTapped:
+            return .send(.delegate(.saveContact(state.contact)))
+
+        case .delegate:
             return .none
 
         case let .setName(name):
