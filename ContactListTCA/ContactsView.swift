@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ContactsView.swift
 //  ContactListTCA
 //
 //  Created by Márcio Oliveira on 13/07/2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct ContentView: View {
+struct ContactsView: View {
     let store: StoreOf<ContactsFeature>
 
     var body: some View {
@@ -34,9 +34,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ContactsView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView(
+    ContactsView(
       store: Store(
         initialState: ContactsFeature.State(
           contacts: [
