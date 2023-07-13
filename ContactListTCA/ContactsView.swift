@@ -10,7 +10,7 @@ import ComposableArchitecture
 
 struct ContactsView: View {
     let store: StoreOf<ContactsFeature>
-
+    
     var body: some View {
         NavigationStack {
             WithViewStore(self.store, observe: \.contacts) { viewStore in
@@ -31,22 +31,32 @@ struct ContactsView: View {
                 }
             }
         }
+        .sheet(
+            store: self.store.scope(
+                state: \.$addContact,
+                action: { .addContact($0) }
+            )
+        ) { addContactStore in
+            NavigationStack {
+                AddContactView(store: addContactStore)
+            }
+        }
     }
 }
 
 struct ContactsView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContactsView(
-      store: Store(
-        initialState: ContactsFeature.State(
-          contacts: [
-            Contact(id: UUID(), name: "Blob"),
-            Contact(id: UUID(), name: "Blob Jr"),
-            Contact(id: UUID(), name: "Blob Sr"),
-          ]
-        ),
-        reducer: ContactsFeature()
-      )
-    )
-  }
+    static var previews: some View {
+        ContactsView(
+            store: Store(
+                initialState: ContactsFeature.State(
+                    contacts: [
+                        Contact(id: UUID(), name: "Blob"),
+                        Contact(id: UUID(), name: "Blob Jr"),
+                        Contact(id: UUID(), name: "Blob Sr"),
+                    ]
+                ),
+                reducer: ContactsFeature()
+            )
+        )
+    }
 }
