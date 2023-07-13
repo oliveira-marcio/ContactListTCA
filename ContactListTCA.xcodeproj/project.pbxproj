@@ -15,6 +15,7 @@
 		36C42A902A5FEB7B00E74890 /* ContactListTCAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C42A8F2A5FEB7B00E74890 /* ContactListTCAUITests.swift */; };
 		36C42A922A5FEB7B00E74890 /* ContactListTCAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C42A912A5FEB7B00E74890 /* ContactListTCAUITestsLaunchTests.swift */; };
 		36C42AA02A5FEBE900E74890 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 36C42A9F2A5FEBE900E74890 /* ComposableArchitecture */; };
+		36C42AA22A5FECC000E74890 /* ContactsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C42AA12A5FECC000E74890 /* ContactsFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		36C42A8B2A5FEB7B00E74890 /* ContactListTCAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactListTCAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C42A8F2A5FEB7B00E74890 /* ContactListTCAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTCAUITests.swift; sourceTree = "<group>"; };
 		36C42A912A5FEB7B00E74890 /* ContactListTCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		36C42AA12A5FECC000E74890 /* ContactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				36C42A742A5FEB7900E74890 /* ContactListTCAApp.swift */,
 				36C42A762A5FEB7900E74890 /* ContentView.swift */,
+				36C42AA12A5FECC000E74890 /* ContactsFeature.swift */,
 				36C42A782A5FEB7B00E74890 /* Assets.xcassets */,
 				36C42A7A2A5FEB7B00E74890 /* Preview Content */,
 			);
@@ -267,6 +270,7 @@
 			files = (
 				36C42A772A5FEB7900E74890 /* ContentView.swift in Sources */,
 				36C42A752A5FEB7900E74890 /* ContactListTCAApp.swift in Sources */,
+				36C42AA22A5FECC000E74890 /* ContactsFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
