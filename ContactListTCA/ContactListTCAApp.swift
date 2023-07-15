@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct ContactListTCAApp: App {
+    static let store = Store(initialState: ContactsFeature.State()) {
+        ContactsFeature()
+            ._printChanges()
+    }
+
     var body: some Scene {
         WindowGroup {
-//            ContactsView()
+            ContactsView(store: ContactListTCAApp.store)
         }
     }
 }
